@@ -1,25 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aDu-Wv-DdE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="j93-vh-hfb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="aDu-Wv-DdE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0I8-6H-OFM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1Tk-Zf-tTz" kind="relationship" relationship="rootViewController" id="Sds-hm-I2f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RoF-DH-OvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="-136"/>
+        </scene>
+        <!--Home Screen-->
+        <scene sceneID="rcm-yH-Q6r">
+            <objects>
+                <viewController storyboardIdentifier="STCHomeScreen" id="1Tk-Zf-tTz" customClass="STCHomeScreen" customModule="ShootingClothes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Od3-jP-KGh"/>
+                        <viewControllerLayoutGuide type="bottom" id="sQN-Cm-SIy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="POM-UK-jR7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x7y-b1-683">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sQN-Cm-SIy" firstAttribute="top" secondItem="x7y-b1-683" secondAttribute="bottom" id="5ma-0v-SjE"/>
+                            <constraint firstItem="x7y-b1-683" firstAttribute="top" secondItem="POM-UK-jR7" secondAttribute="topMargin" id="X2G-AW-mmG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x7y-b1-683" secondAttribute="trailing" constant="-20" id="e0e-Yb-062"/>
+                            <constraint firstItem="x7y-b1-683" firstAttribute="leading" secondItem="POM-UK-jR7" secondAttribute="leadingMargin" constant="-20" id="zlt-hh-1yD"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hGr-QF-dfN"/>
+                    <connections>
+                        <outlet property="_takeImageView" destination="x7y-b1-683" id="g3i-kd-1wM"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9u-JF-BM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1207" y="-136"/>
         </scene>
     </scenes>
 </document>
