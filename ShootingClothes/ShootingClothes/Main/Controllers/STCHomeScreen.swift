@@ -11,7 +11,9 @@ import MobileCoreServices
 
 class STCHomeScreen: STCBaseScreen, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var _mainContentView: UIView!
     @IBOutlet weak var _takeImageView: UIImageView!
+    
     var imagePicker:UIImagePickerController! = nil
     
     override func viewDidLoad() {
@@ -33,7 +35,7 @@ class STCHomeScreen: STCBaseScreen, UIImagePickerControllerDelegate, UINavigatio
         
         
         let addTextView = STCAddTextView.createAddTextView(CGPointMake(5, 70), delegate: nil)
-        view.addSubview(addTextView)
+        _mainContentView.addSubview(addTextView)
         
     }
     

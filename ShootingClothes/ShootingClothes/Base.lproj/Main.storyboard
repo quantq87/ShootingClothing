@@ -34,20 +34,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x7y-b1-683">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtR-PC-JyU">
+                                <rect key="frame" x="10" y="69" width="580" height="526"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x7y-b1-683">
+                                        <rect key="frame" x="0.0" y="0.0" width="580" height="526"/>
+                                        <color key="backgroundColor" red="0.97254901959999995" green="0.72549019609999998" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.66503182240000003" blue="0.082389746659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="x7y-b1-683" secondAttribute="bottom" id="Xaz-Xf-CHY"/>
+                                    <constraint firstItem="x7y-b1-683" firstAttribute="top" secondItem="dtR-PC-JyU" secondAttribute="top" id="brF-N9-IMW"/>
+                                    <constraint firstItem="x7y-b1-683" firstAttribute="leading" secondItem="dtR-PC-JyU" secondAttribute="leading" id="kFL-wG-ik4"/>
+                                    <constraint firstAttribute="trailing" secondItem="x7y-b1-683" secondAttribute="trailing" id="rEe-pC-Set"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sQN-Cm-SIy" firstAttribute="top" secondItem="x7y-b1-683" secondAttribute="bottom" id="5ma-0v-SjE"/>
-                            <constraint firstItem="x7y-b1-683" firstAttribute="top" secondItem="POM-UK-jR7" secondAttribute="topMargin" id="X2G-AW-mmG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="x7y-b1-683" secondAttribute="trailing" constant="-20" id="e0e-Yb-062"/>
-                            <constraint firstItem="x7y-b1-683" firstAttribute="leading" secondItem="POM-UK-jR7" secondAttribute="leadingMargin" constant="-20" id="zlt-hh-1yD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dtR-PC-JyU" secondAttribute="trailing" constant="-10" id="GSe-aZ-tng"/>
+                            <constraint firstItem="dtR-PC-JyU" firstAttribute="leading" secondItem="POM-UK-jR7" secondAttribute="leadingMargin" constant="-10" id="KhO-9k-wSh"/>
+                            <constraint firstItem="dtR-PC-JyU" firstAttribute="top" secondItem="Od3-jP-KGh" secondAttribute="bottom" constant="5" id="h0R-LL-LkQ"/>
+                            <constraint firstItem="sQN-Cm-SIy" firstAttribute="top" secondItem="dtR-PC-JyU" secondAttribute="bottom" constant="5" id="x5J-m7-6tt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hGr-QF-dfN"/>
                     <connections>
+                        <outlet property="_mainContentView" destination="dtR-PC-JyU" id="z0Z-Ow-9GI"/>
                         <outlet property="_takeImageView" destination="x7y-b1-683" id="g3i-kd-1wM"/>
                     </connections>
                 </viewController>
