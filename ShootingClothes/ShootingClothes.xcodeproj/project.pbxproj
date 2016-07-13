@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F4AF63F1D3643A5005EBD42 /* STCImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4AF63E1D3643A5005EBD42 /* STCImageView.swift */; };
 		6FD6339C1D337A9000D00F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6339B1D337A9000D00F45 /* AppDelegate.swift */; };
 		6FD633A11D337A9000D00F45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD6339F1D337A9000D00F45 /* Main.storyboard */; };
 		6FD633A61D337A9000D00F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD633A41D337A9000D00F45 /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F4AF63E1D3643A5005EBD42 /* STCImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCImageView.swift; sourceTree = "<group>"; };
 		6FD633981D337A9000D00F45 /* ShootingClothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShootingClothes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD6339B1D337A9000D00F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FD633A01D337A9000D00F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F4AF63D1D364384005EBD42 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6F4AF63E1D3643A5005EBD42 /* STCImageView.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		6FD6338F1D337A9000D00F45 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 		6FD633BD1D33A4CC00D00F45 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6F4AF63D1D364384005EBD42 /* Images */,
 				6FD633BE1D33A51600D00F45 /* AddText */,
 				6FD633BF1D33A58400D00F45 /* STCBaseView.swift */,
 			);
@@ -214,6 +225,7 @@
 			files = (
 				6FD633C51D33A9E000D00F45 /* Extensions.swift in Sources */,
 				6FD633C21D33A5A900D00F45 /* STCAddTextView.swift in Sources */,
+				6F4AF63F1D3643A5005EBD42 /* STCImageView.swift in Sources */,
 				6FD633C01D33A58400D00F45 /* STCBaseView.swift in Sources */,
 				6FD6339C1D337A9000D00F45 /* AppDelegate.swift in Sources */,
 				6FD633BA1D33885F00D00F45 /* STCBaseScreen.swift in Sources */,
@@ -370,6 +382,7 @@
 				6FD633AC1D337A9000D00F45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

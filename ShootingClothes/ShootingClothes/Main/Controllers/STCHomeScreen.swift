@@ -9,17 +9,25 @@
 import UIKit
 import MobileCoreServices
 
-class STCHomeScreen: STCBaseScreen, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class STCHomeScreen: STCBaseScreen, UIImagePickerControllerDelegate, UINavigationControllerDelegate, STCImageViewDelegate {
     
     @IBOutlet weak var _mainContentView: UIView!
-    @IBOutlet weak var _takeImageView: UIImageView!
+    @IBOutlet weak var _takeImageView: STCImageView!
     
     var imagePicker:UIImagePickerController! = nil
+    
+    var addTextView: STCAddTextView! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpScreen()
+        setUpDelegate()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,10 +41,10 @@ class STCHomeScreen: STCBaseScreen, UIImagePickerControllerDelegate, UINavigatio
         let cameraButton : UIBarButtonItem = UIBarButtonItem(image: selectedImage, style: .Plain, target: self, action:#selector(openCameraButton))
         navigationItem.leftBarButtonItem = cameraButton
         
-        
-        let addTextView = STCAddTextView.createAddTextView(CGPointMake(5, 70), delegate: nil)
-        _mainContentView.addSubview(addTextView)
-        
+    }
+    
+    func setUpDelegate() {
+        self._takeImageView.setDelegate(self)
     }
     
     func openCameraButton () {
@@ -51,6 +59,18 @@ class STCHomeScreen: STCBaseScreen, UIImagePickerControllerDelegate, UINavigatio
             
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }
+    }
+    
+    func didTouchInSideImage(point: CGPoint) {
+        if addTextView == nil {
+            addTextView = STCAddTextView.createAddTextView(point, delegate: nil)
+        }
+        else {
+            addTextView.moveViewToPoint(point)
+        }
+        
+        _mainContentView.addSubview(addTextView)
+
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){

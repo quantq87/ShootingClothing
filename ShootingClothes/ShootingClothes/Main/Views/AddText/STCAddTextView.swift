@@ -32,12 +32,6 @@ class STCAddTextView : STCBaseView {
         return imageView
     }()
     
-    var tapGestureRecognizer: UITapGestureRecognizer?
-    
-    struct Actions {
-        static let buttonTapped = #selector(STCAddTextView.handImageOnTapped(_:))
-    }
-    
     
     class func createAddTextView(point: CGPoint, delegate: STCAddTextViewDelegate!) -> STCAddTextView {
         let addTextView = STCAddTextView(frame : CGRectZero)
@@ -58,19 +52,11 @@ class STCAddTextView : STCBaseView {
         addTextView.addConstraintView("V:|-5-[tfAddText]-5-|", views:views);
         addTextView.addConstraintView("H:|-5-[tfAddText]-5-[handleImageView(32)]-5-|", views:views);
         addTextView.addConstraintView("V:|-(>=8)-[handleImageView(==32)]-(>=8)-|", views:views);
-        
-        addTextView.addGestrueRecognizerForHand()
-        
         return addTextView;
     }
     
-    func addGestrueRecognizerForHand() {
-        tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(STCAddTextView.handImageOnTapped(_:)))
-        handleImageView.userInteractionEnabled = true
-    }
-    
-    func handImageOnTapped(sender: UITapGestureRecognizer) {
-        
+    func moveViewToPoint(point: CGPoint) {
+        setFrameConfiguration(CGRectMake(point.x, point.y, 200, 50))
     }
     
     func setFrameConfiguration(frameLocal: CGRect) {
