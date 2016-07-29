@@ -47,6 +47,10 @@ class STCImageView: UIImageView {
         self.addGestureRecognizer(tapGestureRecognizer!)
     }
     
+    func setTestString(string: String) {
+        print("Test : \(string)")
+    }
+    
     func setDelegate(aDelegate: STCImageViewDelegate) {
         delegate = aDelegate
     }

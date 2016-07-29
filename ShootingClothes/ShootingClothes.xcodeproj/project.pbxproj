@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6F4AF63F1D3643A5005EBD42 /* STCImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4AF63E1D3643A5005EBD42 /* STCImageView.swift */; };
+		6F8B4A5C1D3C7DBB00BA511A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B4A5B1D3C7DBB00BA511A /* Constants.swift */; };
+		6FC20B181D3F5BEB002E129D /* STCPhotoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC20B171D3F5BEB002E129D /* STCPhotoScreen.swift */; };
 		6FD6339C1D337A9000D00F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6339B1D337A9000D00F45 /* AppDelegate.swift */; };
 		6FD633A11D337A9000D00F45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD6339F1D337A9000D00F45 /* Main.storyboard */; };
 		6FD633A61D337A9000D00F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD633A41D337A9000D00F45 /* LaunchScreen.storyboard */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		6F4AF63E1D3643A5005EBD42 /* STCImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCImageView.swift; sourceTree = "<group>"; };
+		6F8B4A5B1D3C7DBB00BA511A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Constants/Constants.swift; sourceTree = "<group>"; };
+		6FC20B171D3F5BEB002E129D /* STCPhotoScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STCPhotoScreen.swift; path = ShootingClothes/Main/Controllers/STCPhotoScreen.swift; sourceTree = SOURCE_ROOT; };
 		6FD633981D337A9000D00F45 /* ShootingClothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShootingClothes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD6339B1D337A9000D00F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FD633A01D337A9000D00F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,14 @@
 				6F4AF63E1D3643A5005EBD42 /* STCImageView.swift */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		6F8B4A5A1D3C7DA000BA511A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				6F8B4A5B1D3C7DBB00BA511A /* Constants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		6FD6338F1D337A9000D00F45 = {
@@ -109,6 +121,7 @@
 		6FD633B21D33855000D00F45 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				6F8B4A5A1D3C7DA000BA511A /* Constants */,
 				6FD633C31D33A9B100D00F45 /* Extensions */,
 				6FD633BD1D33A4CC00D00F45 /* Views */,
 				6FD633B31D33867400D00F45 /* Controllers */,
@@ -121,6 +134,7 @@
 			children = (
 				6FD633B91D33885F00D00F45 /* STCBaseScreen.swift */,
 				6FD633B61D33872F00D00F45 /* STCHomeScreen.swift */,
+				6FC20B171D3F5BEB002E129D /* STCPhotoScreen.swift */,
 			);
 			name = Controllers;
 			path = Main/Controllers;
@@ -226,8 +240,10 @@
 				6FD633C51D33A9E000D00F45 /* Extensions.swift in Sources */,
 				6FD633C21D33A5A900D00F45 /* STCAddTextView.swift in Sources */,
 				6F4AF63F1D3643A5005EBD42 /* STCImageView.swift in Sources */,
+				6FC20B181D3F5BEB002E129D /* STCPhotoScreen.swift in Sources */,
 				6FD633C01D33A58400D00F45 /* STCBaseView.swift in Sources */,
 				6FD6339C1D337A9000D00F45 /* AppDelegate.swift in Sources */,
+				6F8B4A5C1D3C7DBB00BA511A /* Constants.swift in Sources */,
 				6FD633BA1D33885F00D00F45 /* STCBaseScreen.swift in Sources */,
 				6FD633B71D33872F00D00F45 /* STCHomeScreen.swift in Sources */,
 			);

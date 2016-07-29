@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aDu-Wv-DdE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aDu-Wv-DdE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RoF-DH-OvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="513" y="-136"/>
+            <point key="canvasLocation" x="-538" y="76"/>
         </scene>
         <!--Home Screen-->
         <scene sceneID="rcm-yH-Q6r">
@@ -37,17 +37,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtR-PC-JyU" customClass="STCImageView" customModule="ShootingClothes" customModuleProvider="target">
                                 <rect key="frame" x="10" y="69" width="580" height="526"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x7y-b1-683">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x7y-b1-683" customClass="STCImageView" customModule="ShootingClothes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="580" height="526"/>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.72549019609999998" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.66503182240000003" blue="0.082389746659999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="x7y-b1-683" secondAttribute="bottom" id="Xaz-Xf-CHY"/>
-                                    <constraint firstItem="x7y-b1-683" firstAttribute="top" secondItem="dtR-PC-JyU" secondAttribute="top" id="brF-N9-IMW"/>
-                                    <constraint firstItem="x7y-b1-683" firstAttribute="leading" secondItem="dtR-PC-JyU" secondAttribute="leading" id="kFL-wG-ik4"/>
-                                    <constraint firstAttribute="trailing" secondItem="x7y-b1-683" secondAttribute="trailing" id="rEe-pC-Set"/>
+                                    <constraint firstAttribute="bottom" secondItem="x7y-b1-683" secondAttribute="bottom" placeholder="YES" id="Xaz-Xf-CHY"/>
+                                    <constraint firstItem="x7y-b1-683" firstAttribute="top" secondItem="dtR-PC-JyU" secondAttribute="top" placeholder="YES" id="brF-N9-IMW"/>
+                                    <constraint firstItem="x7y-b1-683" firstAttribute="leading" secondItem="dtR-PC-JyU" secondAttribute="leading" placeholder="YES" id="kFL-wG-ik4"/>
+                                    <constraint firstAttribute="trailing" secondItem="x7y-b1-683" secondAttribute="trailing" placeholder="YES" id="rEe-pC-Set"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -62,12 +62,68 @@
                     <navigationItem key="navigationItem" id="hGr-QF-dfN"/>
                     <connections>
                         <outlet property="_mainContentView" destination="dtR-PC-JyU" id="z0Z-Ow-9GI"/>
-                        <outlet property="_takeImageView" destination="x7y-b1-683" id="g3i-kd-1wM"/>
+                        <outlet property="_takeImageView" destination="x7y-b1-683" id="xnc-pD-3n7"/>
+                        <segue destination="AHz-JK-cjC" kind="show" identifier="segueShowPhotoScreen" id="UQq-sc-Qko"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9u-JF-BM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="-136"/>
+            <point key="canvasLocation" x="156" y="76"/>
+        </scene>
+        <!--Photo Screen-->
+        <scene sceneID="nrO-CG-D8J">
+            <objects>
+                <viewController storyboardIdentifier="STCPhotoScreen" id="AHz-JK-cjC" customClass="STCPhotoScreen" customModule="ShootingClothes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BFv-Uk-Zub"/>
+                        <viewControllerLayoutGuide type="bottom" id="qpg-ae-wI3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rZ6-XW-077">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GHU-17-alV">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x2M-fG-5oJ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCellIdentify" id="fyT-zo-1ZP">
+                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.66503182240000003" blue="0.082389746659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="AHz-JK-cjC" id="87a-x7-3vC"/>
+                                    <outlet property="delegate" destination="AHz-JK-cjC" id="Wpu-Hp-4nm"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GHU-17-alV" firstAttribute="leading" secondItem="rZ6-XW-077" secondAttribute="leadingMargin" constant="-20" id="5bP-Cm-uZI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GHU-17-alV" secondAttribute="trailing" constant="-20" id="Zkl-3P-J0A"/>
+                            <constraint firstItem="GHU-17-alV" firstAttribute="top" secondItem="BFv-Uk-Zub" secondAttribute="bottom" id="tgT-TJ-faU"/>
+                            <constraint firstItem="qpg-ae-wI3" firstAttribute="top" secondItem="GHU-17-alV" secondAttribute="bottom" id="yCg-Ua-jbN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_photoCollectionView" destination="GHU-17-alV" id="QJ8-m1-XWy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxw-hq-xed" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937" y="76"/>
         </scene>
     </scenes>
 </document>
